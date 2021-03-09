@@ -1,0 +1,28 @@
+@mixin flexCenter($flexdir: row, $justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $flexdir;
+}
+
+@mixin borderOutlineNone() {
+  border: none;
+  outline: none;
+}
+
+@mixin backgroundSetter($img, $size: cover, $position: center) {
+  background: url("./imgs/#{$img}") no-repeat;
+  background-size: $size;
+  background-position: $position;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $primaryFontColor;
+}
+
+body {
+  background: $primaryBg;
+}

@@ -1,0 +1,20 @@
+.list-container {
+  @include flexCenter(column, center, center);
+
+  .card--v2{
+    &__empty-text{
+      margin: 10px 0 0 3px;
+      font-size: 1.05rem;
+    }
+  }
+
+  &--full {
+    min-height: 15vh;
+  }
+
+  &--one-section-empty{ min-height: 0; }
+
+  &--empty {
+    min-height: 25rem;
+  }
+}

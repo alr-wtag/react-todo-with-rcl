@@ -1,0 +1,102 @@
+.input-container {
+  @include flexCenter(row, space-evenly, flex-start);
+  height: 20vh;
+  padding: 2rem 15rem;
+
+  .select-box {
+    position: relative;
+    width: 7rem;
+    top: 6px;
+    right: 10px;
+    box-shadow: 0px 1px 3px rgba(75, 15, 167, 0.16);
+
+    &__control {
+      min-height: 43px;
+    }
+
+    &__control--is-focused {
+      border-color: $selectBorderDefault;
+      box-shadow: inherit;
+
+      &:hover {
+        border-color: $selectBorderHover;
+      }
+    }
+  }
+
+  &__input-section {
+    @include flexCenter(row, center, flex-start);
+    border-radius: 8px;
+
+    .text-field__box {
+      background: $componentBg;
+      font-family: inherit;
+      font-size: 1.25rem;
+      overflow-y: hidden;
+      border: 1px solid $inputFieldBorderColour;
+    }
+
+    &--input-height {
+      &-sm {
+        .text-field--normal {
+          height: 2.75rem;
+        }
+      }
+
+      &-lg {
+        .text-field--normal {
+          height: 4rem;
+        }
+      }
+
+      &-xl{
+        .text-field--normal {
+          height: 5.5rem;
+        }
+      }
+
+      &-xxl{
+        .text-field--normal {
+          height: 7.25rem;
+        }
+      }
+
+      &-xxxl{
+        .text-field--normal {
+          height: 8.5rem;
+        }
+      }
+    }
+
+    &__input {
+      width: 85%;
+      height: 40px;
+      font-size: 1.5rem;
+      font-family: inherit;
+      padding: 0.25rem 3rem;
+      background: $inputFieldBg;
+      border-radius: 10px;
+      resize: none;
+      overflow: hidden;
+      box-shadow: none;
+      @include borderOutlineNone;
+      border: $inputFieldBorderColour;
+
+      &::placeholder {
+        color: #e3e3e6;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+
+    .icon-button--v2 {
+      margin-top: -3px;
+      transition: transform 0.1s ease-in;
+
+      &:hover {
+        background: transparent;
+        transform: scale(1.25);
+      }
+    }
+  }
+}

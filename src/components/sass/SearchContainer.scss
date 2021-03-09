@@ -1,0 +1,45 @@
+.search-container {
+  @include flexCenter(row, space-evenly);
+  height: 15vh;
+
+  &__input-section {
+    @extend .input-container__input-section;
+
+    &--search-height{
+      &-sm {
+        .text-field--normal {
+          height: 2.75rem;
+        }
+      }
+
+      &-lg {
+        .text-field--normal {
+          height: 4rem;
+        }
+      }
+
+      &-xl{
+        .text-field--normal {
+          height: 5.5rem;
+        }
+      }
+
+      &-xxl{
+        .text-field--normal {
+          height: 7.25rem;
+        }
+      }
+
+      &-xxxl{
+        .text-field--normal {
+          height: 8.5rem;
+        }
+      }
+    }
+
+    &__input {
+      @extend .input-container__input-section__input;
+      width: 100%;
+    }
+  }
+}

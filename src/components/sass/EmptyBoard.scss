@@ -1,0 +1,19 @@
+.empty-board {
+    @include flexCenter(column);
+    width: 40%;
+    height: 100%;
+
+    #no_task {
+      @include backgroundSetter("task-list.svg");
+      width: 125px;
+      height: 125px;
+      filter: grayscale(1);
+      opacity: 0.5;
+    }
+
+    div:nth-child(2) {
+      font-size: 1.3rem;
+      padding: 15px 0 15px 10px;
+    }
+}
+

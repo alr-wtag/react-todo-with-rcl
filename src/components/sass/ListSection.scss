@@ -1,0 +1,51 @@
+.list-section {
+  @include flexCenter(column, center, flex-start);
+  margin: 3rem 2rem 0 2rem;
+
+  .task-list__item {
+    width: 33rem;
+    &-tag {
+      .emphasis-tag {
+        &--normal {
+          font-size: 12px;
+          font-weight: 600;
+          height: 20px;
+          padding: 0 5px;
+        }
+
+        &--white-font {
+          .emphasis-tag__content {
+            color: $componentBg;
+            &__text {
+              color: inherit;
+            }
+          }
+        }
+      }
+    }
+
+    &-title {
+      font-size: 18px;
+    }
+
+    &-avatar {
+      display: none;
+    }
+
+    &-avatars {
+      &-assignee,
+      &-reporter {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 1.125rem;
+    margin-bottom: 15px;
+  }
+
+  &--none {
+    display: none;
+  }
+}
